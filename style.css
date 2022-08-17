@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    background: rgb(250, 232, 219);
+}
+
+#header {
+    font-size: 50px;
+    text-align: center;
+    padding: 15px;
+}
+
+#settings {
+    border: 2px solid;
+    height: 100px;
+    margin: 10px;
+}
+
+#canvas {
+    border: 2px solid;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#grid {
+    display: flex;
+    border:2px solid;
+    margin: 0px;
+    padding: 0px;
+    width: 500px;
+    height:500px;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+#pixel {
+    margin: 0px;
+    padding: 0px;
+}
+
