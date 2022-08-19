@@ -1,44 +1,69 @@
 let grid = document.querySelector('#grid');
-let number = 10; 
-let size;
-let deflt = number*number;
+let number = document.getElementById('number');
+let boxes = document.querySelectorAll('#pixel');
 
-function box() {
-    size = 500/number;
-    for(let j = 0;j < deflt;j++){
-        let div = document.createElement('div')
-        div.style.height = size+'px'
-        div.style.width = size+'px'
-        grid.appendChild(div)
-        div.setAttribute('id','pixel');   
-     }   
+
+
+function box(num) {
+    console.log(num)
+    console.log(number.value)
+     
+     let box = boxes.length;
+     console.log(boxes.length,1,box)
+
+
+    if (box > 0) {
+        for (let j = 0; j < num * num; j++) {
+            let child = document.getElementById("pixel");
+            grid.removeChild(child)
+            box--;
+            console.log(box,99)
+        }
+    } //else {
+        for (let j = 0; j < num * num; j++) {
+            let div = document.createElement('div')
+            div.style.height = 500 / num + 'px'
+            div.style.width = 500 / num + 'px'
+            grid.appendChild(div)
+            div.setAttribute('id', 'pixel');
+            box++;
+            
+       // }
+
+    }
+    console.log(boxes.length,2,box)
 }
-box()
-let boxes = document.querySelectorAll('#pixel')
-function addcolor(){
+
+    box(number.value)
+
+
+
+
+
+/*function changethegrid(num) {
+    for (let j = 0; j < num*num; j++) {
+        let child = document.getElementById("pixel");
+        grid.removeChild(child)
+    }
+    let numbe = document.getElementById('number');
+    box(numbe.value);
+}
+
+function addcolor() {
     boxes.forEach(pixel => {
-        pixel.addEventListener('mouseover',function(){
-            pixel.style.background = 'black'})
-    })}
-addcolor()
+        pixel.addEventListener('mouseover', function () {
+            pixel.style.background = 'black'
+        })
+    })
+}
 
 function cleargrid() {
     boxes.forEach(pixel => {
-        pixel.addEventListener('mouseover',function(){
-            pixel.style.background = 'white'})
-    })}
-function changethegrid(){
-  for(let j = 0;j < deflt;j++){
-    let child = document.getElementById("pixel");
-    grid.removeChild(child)
-    }
-    //number = document.getElementById('number').value;
-   //box()
-   addcolor()
+        pixel.addEventListener('mouseover', function () {
+            pixel.style.background = 'white'
+        })
+    })
 }
 
-///
-
-
-
-    
+addcolor()
+*///
