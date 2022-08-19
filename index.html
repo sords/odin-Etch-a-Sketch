@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,24 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="header">Etch-a-Sketch</div>
-
     <div id="main">
         <div id="settings">
-            <input id='number' type="number">
-
-            <input id="submit" onclick="box(number.value)" type="submit">
-
-            <button id="clear" onclick="cleargrid()">clear</button>
-            <button id="addcolor" onclick="addcolor()">black</button>
+            <input type="color" id="favcolor" name="favcolor" value="#000000">
+            <button id="cleargrid" onclick="random()">random</button>
+            <button id="Earase" onclick="Earasegrid()">Earase</button>
+            <button id="cleargrid" onclick="cleargrid()">clear</button>
+            <input id='number' type="number" value='10'>
+            <button id="submit" onclick="box(number.value)">Apply</button>
         </div>
         <div id="canvas">
             <div id="grid"></div>
         </div>
     </div>
-
-    <div id="footer"></div>
-    
-<script src="script.js"></script> 
+    <div id="footer">Created by <a href="https://github.com/sords/odin-Etch-a-Sketch">@Sampath</div>
+    <script src="script.js"></script>
 </body>
+
 </html>

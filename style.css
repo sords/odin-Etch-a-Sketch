@@ -1,18 +1,53 @@
 body {
     margin: 0px;
-    background: rgb(250, 232, 219);
+    background: rgb(137, 177, 252);
+    font-size: 10px;
 }
 
 #header {
     font-size: 50px;
     text-align: center;
-    padding: 15px;
+    padding: 30px;
+}
+
+#main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #settings {
-    border: 2px solid;
-    height: 100px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+}
+
+button,
+#number {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+#number {
+    width: 142px;
+    height: 30px;
+}
+
+#favcolor {
+    height: 80px;
+    width: 80px;
+
+}
+
+button:hover,
+#number:hover,
+#favcolor:hover {
+    background-color: rgb(137, 177, 252);
+    color: black;
 }
 
 #canvas {
@@ -22,13 +57,13 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 #grid {
     display: flex;
-    border:2px solid;
     margin: 0px;
     padding: 0px;
     width: 500px;
-    height:500px;
+    height: 500px;
     flex-wrap: wrap;
     background-color: white;
 }
@@ -36,6 +71,10 @@ body {
 #pixel {
     margin: 0px;
     padding: 0px;
-    border: 0.5px solid black;
 }
 
+#footer {
+    font-size: large;
+    text-align: center;
+    padding: 25px;
+}
